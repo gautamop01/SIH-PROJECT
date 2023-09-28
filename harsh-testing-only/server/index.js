@@ -1,8 +1,13 @@
+const exp = require('constants');
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
+
+const publicDirectory = path.join(__dirname,'public');
+app.use(express.static(publicDirectory));
+
 app.get('/',(req,res)=> {
   const filePath = path.join(__dirname, 'example.html'); // Change 'example.pdf' to the path of your PDF file.
   fs.readFile(filePath,'utf8',(err,data)=>{
