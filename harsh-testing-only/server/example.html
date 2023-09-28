@@ -1,9 +1,21 @@
 hello harsh
-
+<img src="led_hardware_circuit.jpg"/>
 <a href="/pdf">View example.pdf</a>
 <button id="download">Download example.pdf</button>
 <a href="/downloads">View all Downloads</a>
 <script>
+
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/sw.js').then((registration)=>{
+            console.log('Service Workers registered with scope:',registration.scope);
+        }).catch((err)=>{
+            console.error('Service worker failed:',err);
+        });
+    }
+
+
+
+
     document.getElementById('download').addEventListener('click',()=>{
         console.log('clicked');
         fetch('/pdf-download').then(res=>res.blob())
