@@ -1,0 +1,51 @@
+<script src="
+https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/web/pdf_viewer.min.css
+" rel="stylesheet">
+<script>
+    const dbName = 'pdfDataBase'
+    const storeName = 'pdfStore'
+    console.log('tryig')
+    const request = indexedDB.open(dbName);
+    request.onsuccess = (event)=>{
+        console.log('success');
+        const db = event.target.result;
+        const transaction = db.transaction([storeName],'readonly');
+        const objectStore = transaction.objectStore(storeName);
+        console.log(objectStore);
+        const pdfList = [];
+        objectStore.openCursor().onsuccess = (ev)=>{
+            const cursor = ev.target.result;
+            if(cursor){
+                console.log(cursor)
+                if(cursor.value.blob.type == 'application/pdf'){
+                    console.log('pdf');
+                    pdfList.push({key:cursor.key,pdfData:cursor.value.blob})
+                }
+                cursor.continue();
+            }else{
+                displayPDFList(pdfList);
+            }
+        };
+    };
+
+    function displayPDFList(pdfList){
+        const pdfListContainer = document.getElementById('pdfListContainer');
+        const pdfListElement = document.createElement('ul');
+        pdfList.forEach(pdf => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.textContent = `PDF ${pdf.key}`;
+            link.href = URL.createObjectURL(new Blob([pdf.pdfData],{type: 'application/pdf'}));
+            link.target = '_blank';
+            listItem.appendChild(link);
+            pdfListElement.appendChild(listItem); 
+        });
+
+        pdfListContainer.appendChild(pdfListElement);
+    }
+</script>
+
+<div id="pdfListContainer"></div>

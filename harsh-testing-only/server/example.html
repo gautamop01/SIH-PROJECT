@@ -1,0 +1,46 @@
+hello harsh
+
+<a href="/pdf">View example.pdf</a>
+<button id="download">Download example.pdf</button>
+<a href="/downloads">View all Downloads</a>
+<script>
+    document.getElementById('download').addEventListener('click',()=>{
+        console.log('clicked');
+        fetch('/pdf-download').then(res=>res.blob())
+        .then(pdf=>{
+            const dbName = 'pdfDataBase'
+            const storeName = 'pdfStore'
+
+            const request = indexedDB.open(dbName,1);
+            request.onupgradeneeded = (event)=>{
+                console.log('onupgradeneeded');
+                const db = event.target.result;
+                db.createObjectStore(storeName,{keyPath:'id'});
+            };
+            request.onsuccess = (event)=>{
+                const db = event.target.result;
+                const transaction = db.transaction([storeName],'readwrite');
+                const objectStore = transaction.objectStore(storeName);
+
+                const pdfObject = {
+                    id:'example.pdf',
+                    blob: pdf
+                }
+                const req = objectStore.put(pdfObject);
+
+                req.onsuccess = ()=>{
+                    console.log("PDF saved to indexed db");
+                };
+
+                req.onerror = ()=>{
+                    console.error("Error savig pdf indexed db");
+                };
+            };
+            request.onerror = ()=>{
+                console.error("Error opening indexed db");
+            };
+        }).catch(error=>{
+            console.error("Error fetchig the pdf");          
+        });
+    });
+</script>
