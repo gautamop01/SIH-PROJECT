@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #recommendation {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Skill Recommendation</h1>
+        <p>Enter your skills below to get recommendations:</p>
+        <div id="skillTags"></div>
+        <input type="text" id="skillInput" placeholder="Enter your skills">
+        <button onclick="addSkillTag()">Add Skill</button>
+        <button onclick="getRecommendation()">Get Recommendation</button>
+        <div id="recommendation"></div>
+    </div>
+
+    <script>
+        const skillTags = [];
+
+        function addSkillTag() {
+            const skillInput = document.getElementById('skillInput').value.trim();
+            if (skillInput !== '') {
+                skillTags.push(skillInput);
+                document.getElementById('skillTags').innerHTML += `<span class="tag">${skillInput}</span>`;
+                document.getElementById('skillInput').value = '';
+            }
+        }
+
+        function getRecommendation() {
+            // Retrieve recommendations based on skillTags array (tags entered by the user).
+            // You can send an HTTP request to your backend here.
+            const recommendations = ['Recommendation 1', 'Recommendation 2', 'Recommendation 3'];
+
+            const recommendationElement = document.getElementById('recommendation');
+            recommendationElement.innerHTML = '<h2>Recommendations:</h2>';
+            
+            recommendations.forEach((recommendation, index) => {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = `${index + 1}. ${recommendation}`;
+                recommendationElement.appendChild(paragraph);
+            });
+        }
+    </script>
+</body>
+</html>
