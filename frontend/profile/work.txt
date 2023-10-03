@@ -1,4 +1,3 @@
-> Only Harsh
 -> Login pages 
 Teacher Section
 Student Section
