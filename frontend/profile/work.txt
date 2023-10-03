@@ -1,0 +1,9 @@
+-> Login pages 
+Teacher Section
+Student Section
+Mentor profile 
+
+Give permisssions acc. role, make Dashboard
+
+deadline -> Sunday 7 Oct.
+
