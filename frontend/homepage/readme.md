@@ -1,3 +1,5 @@
+Thanks to "atulcodex"
+
 ### Education website for College & University
 .
 ![Education website template](https://i.ibb.co/0Yr6dLg/education.png)
