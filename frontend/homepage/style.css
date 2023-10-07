@@ -94,8 +94,25 @@ nav .navigation ul li a.active,
 nav .navigation ul li a:hover
 {
 	color: #FDC93B;
-
 }
+nav .navigation ul li a.yellow
+{
+	color: rgb(21, 21, 100);
+	background: #fdc938;
+	transition: 0.3s ease;
+	border: 1px solid rgb(21, 21, 100);
+}
+nav .navigation ul li a.yellow:hover
+{
+	color: white;
+	background: black;
+}
+nav .navigation ul li a.btn
+{
+	padding: 3px 10px;
+	/* border-radius: 5px; */
+}
+
 /*------------- Navigation style end ------------*/
 
 
@@ -156,7 +173,7 @@ nav .navigation ul li a:hover
 	position: absolute;
 	right: 0;
 	bottom: 10px;
-	z-index: 1;
+	z-index: 0.5;
 	text-align: center;
   }
   
@@ -309,13 +326,17 @@ nav .navigation ul li a:hover
 	grid-gap: 1rem;
 	margin-top: 50px;
 }
-
 #features .fea-box
 {
 	background: #edf1f2;
 	text-align: start;
 	padding: 1.2rem;
 	border-radius: 6px;
+	transition: background-color 0.3s; /* Add a transition for smooth color change */
+}
+#features .fea-box:hover
+{
+	background-color: rgb(21, 21, 100); /* Change to the desired background color */
 }
 
 #features .fea-box i
@@ -323,13 +344,20 @@ nav .navigation ul li a:hover
 	font-size: 2.3rem;
 	color: rgb(44, 44, 80);
 }
-
+#features .fea-box:hover i
+{
+	color: white;
+}
 #features .fea-box h3
 {
 	font-size: 1.2rem;
 	font-weight: 600;
 	color: rgb(46, 46, 59);
 	padding: 13px 0 7px 0;
+}
+#features .fea-box:hover h3
+{
+	color: white;
 }
 
 #features .fea-box p
@@ -338,6 +366,29 @@ nav .navigation ul li a:hover
 	font-weight: 400;
 	color: rgb(70, 70, 87);
 }
+
+#features .fea-box:hover p
+{
+	color: white;
+}
+#features .fea-box .yellow
+{
+	color: rgb(21, 21, 100);
+	background: #fdc938;
+	text-decoration: none;
+	padding: 2px 4px;
+	transition: 0.3s ease;
+	border-radius: 2px;
+	margin-left: 85%;
+	/* border: 1px solid rgb(21, 21, 100); */
+}
+
+#features .fea-box:hover .yellow
+{
+	background: white;
+	padding: 2px 8px;
+}
+
 /*------------- Features section styling end -------------*/
 
 
