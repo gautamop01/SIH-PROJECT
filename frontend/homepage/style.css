@@ -124,6 +124,7 @@ nav .navigation ul li a:hover
 	height: 100%;
 	position: absolute;
 	width: 100%;
+	background-size: cover;
   }
   
   .slide:first-child {
@@ -131,19 +132,23 @@ nav .navigation ul li a:hover
   }
   
   .slide:nth-of-type(1) {
-	background: #D7A151;
+	background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5,4,46,0.7)), url("img/back.jpg");
+	/* background: #D7A151; */
   }
   
   .slide:nth-of-type(2) {
-	background: #F4E4CD;
+	background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5,4,46,0.7)), url("img/back1.jpg");
+	/* background: #F4E4CD; */
   }
   
   .slide:nth-of-type(3) {
-	background: #C75534;
+	background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5,4,46,0.7)), url("img/back2.jpg");
+	/* background: #C75534; */
   }
   
   .slide:nth-of-type(4) {
-	background: #D1D1D4;
+	background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5,4,46,0.7)), url("img/c1.jpg");
+	/* background: #D1D1D4; */
   }
   
   .slide_buttons {
@@ -171,19 +176,19 @@ nav .navigation ul li a:hover
 	cursor: pointer;
   }
   
-  .directional_nav {
+  /* .directional_nav {
 	height: 340px;
 	margin: 0 auto;
 	max-width: 940px;
 	position: relative;
 	top: -340px;
-  }
+  } */
   
   .previous_btn {
 	bottom: 0;
-	left: -100px;
 	margin: auto;
 	position: absolute;
+	left: 100px;
 	top: 0;
   }
   
@@ -191,7 +196,7 @@ nav .navigation ul li a:hover
 	bottom: 0;
 	margin: auto;
 	position: absolute;
-	right: -100px;
+	right: 100px;
 	top: 0;
   }
   
@@ -219,6 +224,74 @@ nav .navigation ul li a:hover
 	  right: 50px;
 	}
   }
+
+  .slide.home {
+	padding-top: 35vh;
+	text-align: center; /* Center-align the text inside the div */
+	/* display: flex; Use flexbox to center the child elements horizontally and vertically */
+	/* flex-direction: column; Stack child elements vertically */
+	justify-content: center; /* Center vertically */
+	align-items: center; /* Center horizontally */
+	height: 100vh; /* Optionally, set a minimum height to make it visually centered */
+  }
+  
+  .home h2
+{
+	color: #fff;
+	font-size: 2.2rem;
+	letter-spacing: 1px;
+}
+
+.home p
+{
+	width: 50%;
+	margin-left: 25%;
+	color: #fff;
+	font-size: 0.9rem;
+	line-height: 25px;
+}
+
+.home .btn
+{
+	margin-top: 30px;
+}
+
+.home a
+{
+	text-decoration: none;
+	font-size: 0.9rem;
+	padding: 13px 35px;
+	background-color: #fff;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.home a.blue
+{
+	color: #fff;
+	background: rgb(21, 21, 100);
+	transition: 0.3s ease;
+}
+
+.home a.blue:hover
+{
+	color: rgb(21, 21, 100);
+	background: #fff;
+}
+
+.home a.yellow
+{
+	color: #fff;
+	background: #fdc938;
+	transition: 0.3s ease;
+}
+
+.home a.yellow:hover
+{
+	color: rgb(21, 21, 100);
+	background: #fff;
+}
+
 /*------------- Hero section styling end --------------*/
 
 
