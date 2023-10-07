@@ -413,6 +413,7 @@ nav .navigation ul li a.btn
 	background: #edf1f2;
 	height: 100%;
 	position: relative;
+	transition: all 1s;
 }
 
 #course .courses img
@@ -421,6 +422,7 @@ nav .navigation ul li a.btn
 	height: 60%;
 	background-size: cover;
 	background-position: center;
+	transition: all 1s;
 }
 
 #course .courses .details
@@ -434,10 +436,10 @@ nav .navigation ul li a.btn
 	font-size: .9rem;
 }
 
-#course .courses .cost
+#course .courses .visit
 {
-	background-color: rgb(74, 74, 136);
-	color: #fff;
+	background-color:white;
+	color:  rgb(74, 74, 136);
 	line-height: 70px;
 	width: 70px;
 	height: 70px;
@@ -446,7 +448,26 @@ nav .navigation ul li a.btn
 	position: absolute;
 	right: 15px;
 	bottom: 100px;
+	display: none;
+	font-size: larger;
+	transition: all 1s;
 }
+#course .courses:hover{
+	background: rgb(21, 21, 100);
+}
+
+#course .courses:hover img{
+	height: 55%;
+}
+
+#course .courses:hover .details span,h6{
+	color: white;
+}
+
+#course .courses:hover .visit{
+	display: block;
+}
+
 /*------------- Courses section styling end ------------*/
 
 
@@ -593,6 +614,7 @@ nav .navigation ul li a.btn
 /*------------- Footer section styling starts ------------*/
 footer
 {
+	margin-top: 2vh;
 	padding: 8vw;
 	background-color: #101c32;
 	display: flex;
@@ -787,24 +809,11 @@ footer .copyright .pro-links i:hover
 		padding: 8vw 4vw 8vw 4vw;
 	}
 
-	#registration
+	/* .map
 	{
-		padding: 6vw 4vw 6vw 4vw;
-		gap: 2.2rem;
-	}
+		
+	} */
 
-	#registration .reminder .time
-	{
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin-top: 40px;
-	}
-
-	#experts
-	{
-		padding: 8vw 4vw 6vw 4vw;
-	}
 
 	footer .copyright .pro-links
 	{
