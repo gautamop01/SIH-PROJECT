@@ -151,6 +151,7 @@ nav .navigation ul li a:hover
 	position: absolute;
 	right: 0;
 	bottom: 10px;
+	z-index: 1;
 	text-align: center;
   }
   

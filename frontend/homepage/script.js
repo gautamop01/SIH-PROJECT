@@ -18,9 +18,14 @@ $('.slider').each(function() {
       bulletArray[currentIndex].removeClass('active');
       bulletArray[newIndex].addClass('active');
       
-      if (newIndex > currentIndex) {
-        slideLeft = '100%';
-        animateLeft = '-100%';
+      if ((newIndex > currentIndex)||(currentIndex === $slides.length - 1 && newIndex === 0)) {
+        if(currentIndex === 0 && newIndex === $slides.length - 1){
+          slideLeft = '-100%';
+          animateLeft = '100%';  
+        }else{
+          slideLeft = '100%';
+          animateLeft = '-100%';
+        }
       } else {
         slideLeft = '-100%';
         animateLeft = '100%';
