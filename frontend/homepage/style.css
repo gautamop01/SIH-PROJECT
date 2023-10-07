@@ -161,7 +161,7 @@ nav .navigation ul li a:hover
   }
   
   a.slide_btn {
-	color: #474544;
+	color: #ffffff;
 	font-size: 42px;
 	margin: 0 0.175em;
 	-webkit-transition: all 0.4s ease-in-out;
@@ -188,7 +188,7 @@ nav .navigation ul li a:hover
 	bottom: 0;
 	margin: auto;
 	position: absolute;
-	left: 100px;
+	left: 50px;
 	top: 0;
   }
   
@@ -196,7 +196,7 @@ nav .navigation ul li a:hover
 	bottom: 0;
 	margin: auto;
 	position: absolute;
-	right: 100px;
+	right: 50px;
 	top: 0;
   }
   
@@ -218,10 +218,10 @@ nav .navigation ul li a:hover
   
   @media only screen and (max-width: 767px) {
 	.previous_btn {
-	  left: 50px;
+	  left: 25px;
 	}
 	.next_btn {
-	  right: 50px;
+	  right: 25px;
 	}
   }
 
