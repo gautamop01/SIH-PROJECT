@@ -1,3 +1,13 @@
-> Upload all videos,using youtube API 
-> there is a Download button for login persons 
+> Upload all videos, using youtube API 
+> There is a Download button for login persons 
 
+
+
+> Atul 
+> Collect all Noncopyright content --> pdf, videos, notes  --> add all these things in Excel File links and upload on a Google drive.
+
+Google Drive Link ->
+https://drive.google.com/drive/folders/1ANL9eB73z35-WZ88O-b1GybXqcI1DuQ7?usp=sharing
+
+Excell Sheet ->
+https://docs.google.com/spreadsheets/d/1Kx6QFlv2XyTJaqpjX0mC51BSr_BBC0yHFcqCxRT3yJI/edit?usp=sharing
