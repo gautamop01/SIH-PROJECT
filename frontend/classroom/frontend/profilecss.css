@@ -1,0 +1,49 @@
+.btn{
+    background-color:black;
+    color:white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo{
+    border-radius: 5px;
+    /* max-height:50%;
+    max-width: 50%; */
+    height: 70px;
+    border-radius: 50%;
+}
+.login{
+    text-align: center;
+    border-radius: 14px;
+    width: 350px;
+    padding: 5%;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.input{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    font-size: 16px;
+}
+.link{
+    color: black;
+}
+.line{
+    color:gray;
+    font-size: 14px;
+}
+.linel{
+    color:gray;
+}
+
+.p1{
+    font-weight: bold;
+}
