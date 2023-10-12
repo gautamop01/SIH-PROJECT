@@ -4,9 +4,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	position: relative;
 }
 
+.floating{
+	position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #fff; /* Adjust the background as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a drop shadow for depth */
+  transition: transform 0.3s ease;
 
+}
 #contact .getin
 {
 	width: 350px;
