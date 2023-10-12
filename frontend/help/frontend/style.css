@@ -6,7 +6,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+.dark-theme{
+	background-color: #333333; /* Dark background color */
+	/* color: #ffffff;  */
+}
 body
 {
 	font-family: 'Poppins', sans-serif;

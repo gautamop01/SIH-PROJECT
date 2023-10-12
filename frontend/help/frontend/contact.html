@@ -7,6 +7,7 @@
 
 	<!-- font Awesome CDN link -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 	<!-- External CSS -->
 	<link rel="stylesheet" href="style.css">
@@ -31,6 +32,7 @@
 				<li><a href="blog.html">R & D</a></li>
 				<li><a href="contact.html">Help</a></li>
 				<li><a href="#" class="btn yellow">Login</a></li>
+				<li><i class="ri-moon-line change-theme" id="theme-button"></i></li>
 			</ul>
 
 			<img src="img/menu.png" id="menu-btn" alt="">
@@ -40,16 +42,16 @@
 
 
 	<!-- Hero section starts from here -->
-	<section id="about-home">
+	<!-- <section id="about-home">
 		<h2>
 			Contact Us/
 		</h2>
-	</section>
+	</section> -->
 	<!-- Hero section ends from here -->
 
 
 	<section id="contact">
-		<div class="getin floating">
+		<div class="getin">
 			<h2>Get in touch</h2>
 			<p>Looking for help? Fill the form and start a new adventure.</p>
 
@@ -83,7 +85,7 @@
 		</div>
 
 		<div class="form">
-			<h4>Let's Connect</h4>
+			<h4>Report a Problem</h4>
 			<p>Lorem ipsum, dolor sit amet consectetur.</p>
 			<div class="form-row">
 				<input type="text" placeholder="Your Name">
@@ -158,7 +160,7 @@
 		</div>
 	</footer>
 	<!-- Footer section ends from here -->
-
+	<script type="text/javascript" src="theme.js"></script> 
 	<script>
 		// Show menu links on burger click
 		$('#menu-btn').click(function(){
